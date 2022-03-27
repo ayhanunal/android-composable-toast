@@ -3,6 +3,7 @@ package com.ayhanunal.androidcomposabletoast
 import android.widget.Toast
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
+import androidx.compose.material.ButtonColors
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -23,13 +24,13 @@ fun FirstScreen() {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Button(modifier = Modifier.padding(12.dp), onClick = {
+        Button(modifier = Modifier.padding(vertical = 12.dp).fillMaxWidth().padding(horizontal = 48.dp), onClick = {
             successToast = true
         }) {
             Text("Success Toast")
         }
 
-        Button(modifier = Modifier.padding(12.dp), onClick = {
+        Button(modifier = Modifier.padding(vertical = 12.dp).fillMaxWidth().padding(horizontal = 48.dp), onClick = {
             errorToast = true
         }) {
             Text("Error Toast")
